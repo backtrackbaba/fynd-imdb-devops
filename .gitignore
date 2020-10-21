@@ -1,0 +1,16 @@
+.pyc/
+__pycache__/
+
+.idea/
+.history/
+
+.env
+WIP.md
+
+*.sqlite3
+
+*.pid
+
+/node_modules
+/public
+src/static/assets/custom/assets/css
