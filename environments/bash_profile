@@ -1,0 +1,46 @@
+echo "Sourcing bash_profile!"
+
+############################ Generic Aliases ############################
+
+alias gp="git pull"
+alias c="clear"
+alias sb="source ~/.bash_profile"
+alias ll="ls -al"
+
+export PATH=~/.npm-global/bin:$PATH
+export PATH=/opt/projects/fynd-imdb/apps/fynd-imdb/scripts:$PATH
+
+############################ Application Aliases ############################
+
+
+alias fi="cd /opt/projects/fynd-imdb/apps/domain-tracker"
+alias fid="cd /opt/projects/fynd-imdb/devops/domain-tracker-devops"
+alias data="cd /opt/projects/fynd-imdb/data"
+alias sfi="source /opt/projects/fynd-imdb/runtime-environments/dt/bin/activate"
+
+############## Main DomainTracker Application ##############
+alias imdb.start="sudo systemctl start imdb.service"
+alias imdb.stop="sudo systemctl stop imdb.service"
+alias imdb.restart="sudo systemctl restart imdb.service"
+alias imdb.status="sudo systemctl status imdb.service"
+
+############## Nginx ##############
+alias ngx.start="sudo systemctl start nginx.service"
+alias ngx.stop="sudo systemctl stop nginx.service"
+alias ngx.restart="sudo systemctl restart nginx.service"
+alias ngx.status="sudo systemctl status nginx.service"
+alias ngx.conf="sudo cp /opt/projects/fynd-imdb/devops/fynd-imdb-devops/nginx/imdb.conf /etc/nginx/sites-available/ && ngx.restart"
+
+############## Redis ##############
+alias rds.start="sudo systemctl start redis.service"
+alias rds.stop="sudo systemctl stop redis.service"
+alias rds.restart="sudo systemctl restart redis.service"
+alias rds.status="sudo systemctl status redis.service"
+
+alias rds="redis-cli -p"
+
+############## PostgreSQL ##############
+alias pg.start="sudo systemctl start postgresql@10-main.service"
+alias pg.stop="sudo systemctl stop postgresql@10-main.service"
+alias pg.restart="sudo systemctl restart postgresql@10-main.service"
+alias pg.status="sudo systemctl status postgresql@10-main.service"

@@ -1,0 +1,16 @@
+[Unit]
+Description="Fynd IMDB Application"
+
+[Service]
+Type=simple
+
+User=deploy
+Group=deploy
+
+ExecStart=/bin/bash /opt/projects/fynd-imdb/apps/fynd-imdb/scripts/start-dt.sh
+
+StandardOutput=/opt/projects/fynd-imdb/data/logs/imdb-service/output.log
+StandardError=/opt/projects/fynd-imdb/data/logs/imdb-service/error.log
+
+[Install]
+WantedBy=multi-user.target
